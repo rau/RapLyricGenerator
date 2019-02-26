@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Home</h1>
+{% endblock content %}
+
+{% block button %}
+    <form action="/about" method="post">
+    <button name="forwardBtn" type="submit">Generate Lyrics</button>
+{% endblock button %}

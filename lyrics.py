@@ -7,7 +7,7 @@ scrape_mode = False # use if scraping lyrics
 numToScrape = 100 # number of songs to scrape
 charsInSentence = 60 # num of max chars in a sentence
 
-os.chdir(r'C:\Users\rauna\Desktop\RapLyricGenerator')  # set directory to be used
+os.chdir(r'C:\Users\rauna\Documents\GitHub\RapLyricGenerator')  # set directory to be used
 
 def getJaccardSim(str1, str2):  # Used from Medium Post (calculates similarity)
     a = set(str1.split())
@@ -67,9 +67,11 @@ rhymesForLines = {}
 for bar in generatedLines:
     rhymesForLines[bar] = pronouncing.rhymes(bar.split()[-1])
 
+allBarPairs = []
 with open('DrakeBars.txt', 'a') as file:
     for bar in generatedLines:
         barPair = createBarPair(bar, rhymesForLines)
         if barPair:
-            file.write(barPair)
-            file.write('\n')
+            # file.write(barPair)
+            # file.write('\n')
+            allBarPairs.append(barPair)

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for bar in ABP %}
+        {{bar}}
+        <br></br>
+    {% endfor %}
+{% endblock content %}
+
+{% block button %}
+    <form action="/" method="post">
+    <button name="backHomeBtn" type="submit">Return Home</button>
+{% endblock button %}
