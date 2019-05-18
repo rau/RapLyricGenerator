@@ -81,4 +81,10 @@ def getLines():
 if scrape_mode is True:
     scrape("Drake", genius, numToScrape) # can change to any artist
 
-lines = getLines()
+lines = []
+while(len(lines) < 1):
+    lines = lines + getLines()
+
+songStructure = 'c v c'
+struc = songStructure.split()
+print(struc)

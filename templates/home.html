@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% if title %}
-    <title> {{title}} </title>
-    {% else %}
-    <title>This is the home page</title>
-    {% endif %}
+    <link rel= "stylesheet" type= "text/css" href= "static/main.css">
+    <title>Home</title>
 </head>
-<body>
-    <h1>Home</h1>
+<body background-color:>
     <form action="/about" method="post">
     <button name="forwardBtn" type="submit">Generate Lyrics</button>
-
 </body>
 </html>
